@@ -12,7 +12,7 @@ var CONTAINER_ID = 'v3d-container';
 
     var PUZZLES_DIR = '/puzzles/';
     var logicURL = params.logic ? params.logic : '__LOGIC__visual_logic.js'.replace('__LOGIC__', '');
-    var sceneURL = params.load ? params.load : '__URL__Example App.gltf'.replace('__URL__', '');
+    var sceneURL = params.load ? params.load : '__URL__Example_App.gltf'.replace('__URL__', '');
     if (!sceneURL) {
         console.log('No scene URL specified');
         return;
@@ -199,17 +199,37 @@ function initFullScreen() {
     }
 }
 
-function prepareExternalInterface(app) {
-    // register functions in the app.ExternalInterface to call them from Puzzles, e.g:
-    // app.ExternalInterface.myJSFunction = function() {
-    //     console.log('Hello, World!');
-    // }
+var isLoaded = true;
+var isCompleted = false;
 
+// prepareExternalInterface is called by our iframe
+function prepareExternalInterface(app) {
+    app.ExternalInterface.loadingFinished = function() {
+        isLoaded = true;
+    };
+
+    app.ExternalInterface.appFinished = function() {
+        isCompleted = true;
+    };
 }
 
+// runCode is called by our component functions
 function runCode(app) {
-    // add your code here, e.g. console.log('Hello, World!');
+    window.checkLoaded = function() {
+        return isLoaded;
+    }
 
+    window.checkCompleted = function() {
+        return isCompleted;
+    }
+
+    window.showCube = function() {
+        v3d.puzzles.procedures.showObject();
+    }
+
+    window.hideCube = function() {
+        v3d.puzzles.procedures.hideObject();
+    }
 }
 
 });

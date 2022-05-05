@@ -1,0 +1,55 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <tab name="init" type="InitTab" active="false" scrollx="784.5" scrolly="389.5" scale="0.9"></tab>
+  <tab name="main" type="MainTab" active="true" scrollx="784.5" scrolly="389.5" scale="0.9">
+    <block xmlns="https://developers.google.com/blockly/xml" type="callJSFunction" id="?zZoqegGl(mIRJ7k|{ZS" x="-690" y="-170">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" name="loadingFinished"></mutation>
+      <field name="NAME">loadingFinished</field>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenClicked" id="_8cX6nZd0NHAo]tX/Y{X" x="-690" y="-110">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="false"></mutation>
+      <field name="X_RAY">FALSE</field>
+      <field name="DOUBLE_CLICK">FALSE</field>
+      <field name="LEFT_BUTTON">TRUE</field>
+      <field name="MIDDLE_BUTTON">TRUE</field>
+      <field name="RIGHT_BUTTON">TRUE</field>
+      <value name="VALUE">
+        <shadow type="objectList" id="Y~xgtS5_M===TfAcV^sX">
+          <field name="FIELDNAME">Cube</field>
+        </shadow>
+      </value>
+      <statement name="DO">
+        <block type="callJSFunction" id="J[Dct[xkTI@UjRx~G@ZN">
+          <mutation xmlns="http://www.w3.org/1999/xhtml" name="appFinished"></mutation>
+          <field name="NAME">appFinished</field>
+        </block>
+      </statement>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="procedures_defnoreturn" id="Ik[t{1E~+0AXY@|q{T)X" x="-690" y="10">
+      <field name="NAME">hideObject</field>
+      <comment pinned="false" h="80" w="160">Describe this function...</comment>
+      <statement name="STACK">
+        <block type="hide" id="FfK{:b{.Q(}:aMVKakee">
+          <value name="VALUE">
+            <shadow type="objectList" id="Hn@WrA.UnW3Xm@bX*#hQ">
+              <field name="FIELDNAME">Cube</field>
+            </shadow>
+          </value>
+        </block>
+      </statement>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="procedures_defnoreturn" id="02jVvk0gBgQLvB3`Jf@m" x="-690" y="110">
+      <field name="NAME">showObject</field>
+      <comment pinned="false" h="80" w="160">Describe this function...</comment>
+      <statement name="STACK">
+        <block type="show" id="k,FD~irc?v6R`KT[b;ED">
+          <value name="VALUE">
+            <shadow type="objectList" id="rfYOqZ),6@_XmO;$[(qM">
+              <field name="FIELDNAME">Cube</field>
+            </shadow>
+          </value>
+        </block>
+      </statement>
+    </block>
+  </tab>
+  <editorsettings viewport-x="729.0000610351562" viewport-y="92.54545211791992" viewport-w="698" viewport-h="427.5" viewport-hidden="false" toolbox-library-mode="false" toolbox-minimized-mode="false"></editorsettings>
+</xml>

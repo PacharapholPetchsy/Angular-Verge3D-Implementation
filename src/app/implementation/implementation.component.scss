@@ -1,0 +1,8 @@
+.iframe {
+    transform: scale(0);
+    transition: 200ms ease-in-out;
+}
+
+.iframe.active {
+    transform: scale(1);
+}
