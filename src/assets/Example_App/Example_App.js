@@ -199,7 +199,7 @@ function initFullScreen() {
     }
 }
 
-var isLoaded = true;
+var isLoaded = false;
 var isCompleted = false;
 
 // prepareExternalInterface is called by our iframe
